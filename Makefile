@@ -12,7 +12,7 @@ ifeq ($(UNAME_S), Linux)
 	nasm -f elf32 t1.asm
 endif
 ifeq ($(UNAME_S), Darwin)
-	nasm -f macho32 --prefix t1.asm
+	nasm -f macho32 --prefix _ t1.asm
 endif
 
 fib32.o: fib32.asm
@@ -20,7 +20,7 @@ ifeq ($(UNAME_S), Linux)
 	nasm -f elf32 fib32.asm
 endif
 ifeq ($(UNAME_S), Darwin)
-	nasm -f macho32 --prefix fib32.asm
+	nasm -f macho32 --prefix _ fib32.asm
 endif
 
 clean:
