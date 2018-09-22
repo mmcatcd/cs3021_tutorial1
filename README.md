@@ -21,7 +21,7 @@ You can start writing the t1 assembly code for the functions in __t1.asm__ and b
 
 ### Prerequisites
 
-#### 1. GNU C++ Mutlilib Compiler (g++)
+#### 1. GNU C++ Multilib Compiler (g++)
 
 Preinstalled on MacOS.
 
