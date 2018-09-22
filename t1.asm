@@ -1,13 +1,13 @@
 ; subroutines
-global _min
-global _p
-global _gcd
+global min
+global p
+global gcd
 
 ; variables
-global _g
+global g
 
 section .data
-_g:		dw	4
+g:		dw	4
 
 section .text
 
@@ -19,16 +19,16 @@ section .text
 ;		ebp+16: c - third signed integer
 ; return: 	v	- signed integer
 
-_min:
-	push ebp								; save ebp
+min:
+	push ebp						; save ebp
 	mov ebp, esp						; ebp -> new stack frame
-	sub esp, 4							; allocate space for local v
+	sub esp, 4						; allocate space for local v
 
 	; Write your assembly here
 
 	mov esp, ebp						; restore esp
-	pop ebp									; restore previous ebp
-	ret											; return from function
+	pop ebp							; restore previous ebp
+	ret							; return from function
 	
 ; p subroutine
 ; params:
@@ -38,15 +38,15 @@ _min:
 ;		ebp+20: l - fourth signed integer
 ;	return: min(min(g, i, j), k, l) - signed integer
 
-_p:
-	push ebp								; save ebp
+p:
+	push ebp						; save ebp
 	mov ebp, esp						; ebp -> new stack frame
 	
 	; write your assembly here
 	
 	mov esp, ebp						; restore esp
-	pop ebp									; restore previous ebp
-	ret											; return from function
+	pop ebp							; restore previous ebp
+	ret							; return from function
 
 ; gcd subroutine
 ; Calculates the greatest common divisor of two values
@@ -55,12 +55,12 @@ _p:
 ;		ebp+12: b - second integer
 ; return: signed integer
 
-_gcd:
-	push ebp								; save ebp
+gcd:
+	push ebp						; save ebp
 	mov ebp, esp						; ebp -> new stack frame
 
 	; write your assembly here
 	
 	mov esp, ebp						; restore esp
-	pop ebp									; restore previous ebp
-	ret											; return from function
+	pop ebp							; restore previous ebp
+	ret							; return from function
