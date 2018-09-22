@@ -1,5 +1,5 @@
-global _fib_IA32a
-global _fib_IA32b
+global fib_IA32a
+global fib_IA32b
 
 section .text
 
@@ -18,7 +18,7 @@ section .text
 ;
 ; 06/10/14  used ecx instead of ebx to initialise fi and fj as ecx volatile
 
-_fib_IA32a: push    ebp             ; push frame pointer
+fib_IA32a:  push    ebp             ; push frame pointer
             mov     ebp, esp        ; update ebp
             sub     esp, 8          ; space for local variables fi [ebp-4] and fj [ebp-8]
             mov     eax, [ebp+8]    ; eax = n
@@ -49,7 +49,7 @@ fib_IA32a2: mov     esp, ebp        ; restore esp
 ; makes better use of registers and instruction set
 ;
 
-_fib_IA32b: push    ebp             ; push frame pointer
+fib_IA32b:  push    ebp             ; push frame pointer
             mov     ebp, esp        ; update ebp
             mov     eax, [ebp+8]    ; mov n into eax
             cmp     eax, 1          ; if (n <= 1)
