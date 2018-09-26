@@ -90,7 +90,7 @@ int fib_IA32(int n) {
  * @param: expected - value the function should have returned
  * @return void
  */
-void check(char *s, int v, int expected) {
+void check(const char *s, int v, int expected) {
     cout << s << " = " << v;
     if (v == expected) {
         cout << " OK";
